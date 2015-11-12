@@ -1,0 +1,40 @@
+*{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+
+body{
+
+    background: -webkit-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* Chrome 10+, Saf5.1+ */
+    background:    -moz-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* FF3.6+ */
+    background:     -ms-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* IE10 */
+    background:      -o-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* Opera 11.10+ */
+    background:         linear-gradient(90deg, #606c88 10%, #3f4c6b 90%); /* W3C */
+
+}
+.dashboard{
+    padding-top: 15px;
+}
+
+.sense-rating-block{
+    text-transform: capitalize;
+}
+
+.rating-holder{
+    outline: none;
+    padding: 10px
+}
+
+.panel-heading > h5 {
+    color: #aaa
+}
+
+strong {
+   color: #676767;
+}
+
+#home .panel-body .row{
+    padding: 10px 20px;
+}

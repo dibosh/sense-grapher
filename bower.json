@@ -1,0 +1,13 @@
+{
+  "name": "sensegrapher",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "latest",
+    "font-awesome": "latest",
+    "animate.css": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angular-chart.js": "~0.7.6",
+    "ng-lodash": "~0.2.3"
+  }
+}

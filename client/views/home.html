@@ -1,0 +1,40 @@
+<div class="jumbotron" id="home">
+  <h2>Welcome to Experience 101: The Rule of 5 Senses</h2>
+  <p>Select a rating for each one and then press submit. Please don't press Next until I say so.</p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h5>Experience <strong>{{itemName}}</strong>
+        <a href="#" ng-click="nextItem()" class="pull-right">Next <span aria-hidden="true">&rarr;</span></a>
+      </h5>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-2 sense-rating-block" ng-repeat="sense in senses">
+        {{ sense.type }}
+        <rating class="rating-holder" ng-model="sense.rate"
+                max="max"
+                readonly="isReadonly"
+                on-hover="hoveringOver(value, sense)"
+                on-leave="sense.overStar = null">
+
+        </rating>
+        <span class="label"
+              ng-class="{'label-warning': sense.percent<30, 'label-info': sense.percent>=30 && sense.percent<70, 'label-success': sense.percent>=70}"
+              ng-show="sense.overStar && !isReadonly">{{sense.percent}}%
+        </span>
+      </div>
+      <button class="btn btn-default btn-sm" ng-click="submit()">Submit</button>
+    </div>
+  </div>
+  <p>Press Refresh Graph once everyone else completed the submission. I will let you know.</p>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h5>The Senses Graph <span ng-if="recordsCount > 0">({{recordsCount}} records)</span></h5>
+      <button class="btn btn-default btn-sm" ng-click="refreshGraph()">Refresh Graph</button>
+    </div>
+    <div class="panel-body">
+      <canvas id="line" class="chart chart-line" data="chartData"
+              labels="chartLabels" options="chartOptions">
+      </canvas>
+    </div>
+  </div>
+</div>
